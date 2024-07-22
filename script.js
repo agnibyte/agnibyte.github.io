@@ -13,8 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const newsContainer = document.getElementById('news-container');
 
     fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log(data); // Log data for debugging
             const articles = data.articles;
             articles.forEach(article => {
                 const articleElement = document.createElement('div');
