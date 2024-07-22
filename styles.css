@@ -1,4 +1,14 @@
-/* Resetting default margin and padding */
+:root {
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --background-color: #f0f0f0;
+    --accent-color: #f4f4f4;
+    --font-family: 'Arial, sans-serif';
+    --font-size-large: 2.5em;
+    --font-size-medium: 1.2em;
+    --font-size-small: 1em;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +17,9 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
 }
 
 /* Container styles */
@@ -21,24 +31,24 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: var(--font-size-large);
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: var(--font-size-medium);
     margin-top: 10px;
 }
 
 /* Section styles */
 .image-description {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     padding: 40px 0;
     text-align: center;
 }
@@ -52,7 +62,7 @@ header p {
 }
 
 .intro, .team {
-    background-color: #f9f9f9;
+    background-color: var(--accent-color);
     padding: 40px 0;
     text-align: center;
 }
@@ -67,9 +77,8 @@ header p {
     line-height: 1.8;
 }
 
-
 .team {
-    background: #fff;
+    background: var(--secondary-color);
     padding: 20px 0;
     text-align: center;
 }
@@ -86,7 +95,7 @@ header p {
 }
 
 .team-member {
-    background: #f4f4f4;
+    background: var(--accent-color);
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -111,8 +120,8 @@ header p {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
