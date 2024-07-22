@@ -1,10 +1,25 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, p {
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Basic styling for header */
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
 header {
     background-color: #333;
     color: #fff;
@@ -13,92 +28,71 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
-/* Container styling */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Image and description section */
+/* Section styles */
 .image-description {
-    padding: 50px 0;
+    background-color: #fff;
+    padding: 40px 0;
     text-align: center;
 }
 
 .image-description img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-description p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-top: 20px;
-}
-
-/* Intro section */
-.intro {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.intro h2 {
-    font-size: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
 
-.intro p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Team section */
-.team {
-    padding: 50px 0;
+.intro, .team {
+    background-color: #f9f9f9;
+    padding: 40px 0;
     text-align: center;
 }
 
-.team h2 {
-    font-size: 2rem;
+.intro h2, .team h2 {
     margin-bottom: 20px;
 }
 
+.intro p, .team p {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* Team member styles */
 .team-member {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .team-member h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .team-member p {
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    color: #666;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
-
