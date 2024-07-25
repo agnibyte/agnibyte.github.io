@@ -1863,7 +1863,7 @@ nav .navbar-nav li:last-child a {
 ==========================*/
 
 #consult {
-    padding: 0px 0px 0px;
+    padding: 300px 0px 0px;
     background: #f3f3f3;
 }
 
@@ -2080,19 +2080,3 @@ nav .navbar-nav li:last-child a {
     background: #ff8000; /* Darker background on hover */
 }
 
-/*============================
-18. map class start
-================================*/
-#map {
-    height: 100vh; /* Full viewport height for better visibility */
-    width: 100%;
-    margin-bottom: 20px; /* Space below the map */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-/* Optional: Media query for smaller screens */
-@media (max-width: 768px) {
-    #map {
-        height: 400px; /* Adjust height for smaller screens if needed */
-    }
-}
