@@ -25,8 +25,8 @@
     border: 4px solid transparent;
     border-top-color: #fff;
 
-    -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 
     z-index: 99999;
 }
@@ -42,8 +42,8 @@
         border: 4px solid transparent;
         border-top-color: #fff;
 
-        -webkit-animation: spin 1s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
     #loader:after {
@@ -58,7 +58,7 @@
         border-top-color: #fff;
 
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-          animation: spin 1s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
     @-webkit-keyframes spin {

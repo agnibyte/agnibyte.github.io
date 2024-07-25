@@ -33,50 +33,32 @@ $(function ($) {
         offset: 80
     });
 
-    $(document).ready(function () {
-        var scrollToggleBtn = $('.scroll-toggle-btn');
-        var lastScrollTop = 0; // To keep track of the last scroll position
-        var amountScrolled = 300; // Scroll amount to show the button
-    
-        // Handle scroll event
-        $(window).on('scroll', function () {
-            var currentScrollTop = $(this).scrollTop();
-    
-            // Show or hide the button based on scroll position
-            if (currentScrollTop > amountScrolled) {
-                scrollToggleBtn.fadeIn('slow');
-            } else {
-                scrollToggleBtn.fadeOut('slow');
-            }
-    
-            // Change button functionality based on scroll direction
-            if (currentScrollTop > lastScrollTop) {
-                // Scrolling down
-                scrollToggleBtn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
-            } else {
-                // Scrolling up
-                scrollToggleBtn.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
-            }
-    
-            // Update last scroll position
-            lastScrollTop = currentScrollTop;
-        });
-    
-        // Handle button click
-        scrollToggleBtn.on('click', function () {
-            var currentScrollTop = $(window).scrollTop();
-    
-            if (scrollToggleBtn.find('i').hasClass('fa-chevron-down')) {
-                // Scroll down
-                $('html, body').animate({ scrollTop: $(document).height() }, 600);
-            } else {
-                // Scroll up
-                $('html, body').animate({ scrollTop: 0 }, 600);
-            }
-    
-            return false; // Prevent default link behavior
-        });
+    //    bottom to top js start
+    var amountScrolled = 300;
+    var bootomclass = $('.back-top-btn');
+    bootomclass.hide();
+    $window.on('scroll', function () {
+        if ($window.scrollTop() > amountScrolled) {
+            bootomclass.fadeIn('slow');
+        } else {
+            bootomclass.fadeOut('slow');
+        }
+        var scrollPos = $window.scrollTop();
+
+        if (scrollPos > navOffset) {
+            $('nav').addClass('navbar-fixed');
+        } else {
+            $('nav').removeClass('navbar-fixed');
+        }
     });
+
+    bootomclass.on('click', function () {
+        html_body.animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
     
     // patner slider
     $('.patner_slider').owlCarousel({
